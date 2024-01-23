@@ -1,0 +1,23 @@
+# Interactive Maps with Leaflet
+**Shambhavi Lau**
+*Jan 23, 2024*
+
+## Overview
+This is a web page using R Markdown that features a map created with Leaflet.
+This map shows some of the major hospitals in Delhi, Capital of India
+
+```{r}
+library(leaflet)
+my_map <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat=28.5672, lng=77.2100, popup="AIIMS, Delhi") %>%
+  addMarkers(lat=28.6385, lng=77.1896, popup="Ganga Ram Hospital, Delhi")  %>%
+  addMarkers(lat=28.5657, lng=77.2355, popup="Moolchand Hospital, Delhi")  %>%
+  addMarkers(lat=28.6259, lng=77.2027, popup="RML Hospital, Delhi")  %>%
+  addMarkers(lat=28.5680, lng=77.2058, popup="Safdarjung Hospital, Delhi")  %>%
+  addMarkers(lat=28.7173, lng=77.1110, popup="Rajiv Gandhi Cancer Institute, Delhi")  %>%
+  addMarkers(lat=28.5573, lng=77.2458, popup="National Heart Institute, Delhi")  %>%
+  addMarkers(lat=28.5606, lng=77.2740, popup="Fortis Escorts Heart Institute, Delhi")  %>%
+  addMarkers(lat=28.6741, lng=77.1339, popup="Maharaja Agrasen Hospital, Delhi")
+my_map
+```
